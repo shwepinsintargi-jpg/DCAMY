@@ -37,7 +37,7 @@ function openAlbum(name) {
   currentAlbum = albums[name];
   currentPage = 1;
 
-  document.getElementById("album-list").classList.add("hidden");
+  document.querySelector(".album-grid").classList.add("hidden");
   document.getElementById("photo-container").classList.remove("hidden");
 
   document.getElementById("album-title").innerText = currentAlbum.title;
@@ -63,20 +63,16 @@ function showPage() {
 }
 
 function nextPage() {
-  if (currentPage * photosPerPage < currentAlbum.photos.length) {
-    currentPage++;
-    showPage();
-  }
+  currentPage++;
+  showPage();
 }
 
 function prevPage() {
-  if (currentPage > 1) {
-    currentPage--;
-    showPage();
-  }
+  currentPage--;
+  showPage();
 }
 
 function goBack() {
-  document.getElementById("album-list").classList.remove("hidden");
+  document.querySelector(".album-grid").classList.remove("hidden");
   document.getElementById("photo-container").classList.add("hidden");
 }
