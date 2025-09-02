@@ -3,29 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Girl's Photo Album</title>
+  <title>Photo Album</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>My Girl's Photo Album</h1>
-
-  <!-- Album Grid -->
-  <div class="album-grid">
-    <div class="album" onclick="openAlbum('dont')">Don’t</div>
-    <div class="album" onclick="openAlbum('cry')">Cry</div>
-    <div class="album" onclick="openAlbum('anymore')">Anymore</div>
-    <div class="album" onclick="openAlbum('yu')">Yu</div>
+  <!-- Album grid -->
+  <div id="album-list" class="album-grid">
+    <button onclick="openAlbum('dont')">Don’t</button>
+    <button onclick="openAlbum('cry')">Cry</button>
+    <button onclick="openAlbum('anymore')">Anymore</button>
+    <button onclick="openAlbum('yu')">Yu</button>
   </div>
 
-  <!-- Photo Viewer -->
+  <!-- Photo viewer -->
   <div id="photo-container" class="hidden">
     <h2 id="album-title"></h2>
     <div id="photos" class="photo-grid"></div>
-
     <div class="controls">
-      <button onclick="goBack()">Back</button>
       <button id="prev-btn" onclick="prevPage()">Prev</button>
       <button id="next-btn" onclick="nextPage()">Next</button>
+      <button onclick="goBack()">Back</button>
     </div>
   </div>
 
