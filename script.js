@@ -31,13 +31,13 @@ const albums = {
 
 let currentAlbum = null;
 let currentPage = 1;
-const photosPerPage = 4;
+const photosPerPage = 4; // 4 photos per page
 
 function openAlbum(name) {
   currentAlbum = albums[name];
   currentPage = 1;
 
-  document.querySelector(".album-grid").classList.add("hidden");
+  document.getElementById("album-list").classList.add("hidden");
   document.getElementById("photo-container").classList.remove("hidden");
 
   document.getElementById("album-title").innerText = currentAlbum.title;
@@ -73,6 +73,6 @@ function prevPage() {
 }
 
 function goBack() {
-  document.querySelector(".album-grid").classList.remove("hidden");
+  document.getElementById("album-list").classList.remove("hidden");
   document.getElementById("photo-container").classList.add("hidden");
 }
