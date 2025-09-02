@@ -1,32 +1,37 @@
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #eaf6ff;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  background-color: #e6f0ff; /* pale blue background */
+  text-align: center;
 }
 
-/* Album Grid 2x2 */
+/* 2x2 Album Grid */
 .album-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   max-width: 600px;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
-.album {
-  background-color: pink;
-  border-radius: 15px;
-  padding: 40px 0;
-  font-size: 24px;
+/* Vertical rectangular albums */
+.album-grid button {
+  background-color: #ff69b4; /* pink */
+  border: none;
+  height: 180px; /* taller than wide */
+  font-size: 22px;
   font-weight: bold;
-  color: white;
+  border-radius: 15px;
   cursor: pointer;
-  height: 150px;  /* vertical rectangle */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+
+.album-grid button:hover {
+  background-color: #ff85c1;
+  transform: scale(1.02);
 }
 
 /* Photo viewer */
@@ -37,8 +42,8 @@ body {
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-  max-width: 600px;
+  gap: 10px;
+  max-width: 90%;
   margin: 20px auto;
 }
 
@@ -46,14 +51,19 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .controls {
-  margin-top: 20px;
+  margin: 20px;
 }
 
-button {
+.controls button {
   margin: 5px;
   padding: 10px 20px;
   font-size: 16px;
+  border: none;
+  background: pink;
+  border-radius: 8px;
+  cursor: pointer;
 }
