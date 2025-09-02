@@ -1,3 +1,4 @@
+/* General body styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,17 +10,17 @@ body {
 /* 2x2 Album Grid */
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 albums per row */
   grid-gap: 20px;
   max-width: 600px;
   margin: 40px auto;
 }
 
-/* Vertical rectangular albums */
+/* Vertical rectangular album buttons */
 .album-grid button {
   background-color: #ff69b4; /* pink */
   border: none;
-  height: 180px; /* taller than wide */
+  height: 180px; /* vertical rectangle */
   font-size: 22px;
   font-weight: bold;
   border-radius: 15px;
@@ -34,26 +35,29 @@ body {
   transform: scale(1.02);
 }
 
-/* Photo viewer */
+/* Hide elements */
 .hidden {
   display: none;
 }
 
+/* Photo grid */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 photos per row */
   gap: 10px;
   max-width: 90%;
   margin: 20px auto;
 }
 
+/* Responsive photo style */
 .photo-grid img {
-  width: 100%;
-  height: auto;
+  width: 100%;          /* fill grid cell */
+  height: auto;         /* maintain aspect ratio */
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: cover;    /* crop to fit nicely */
 }
 
+/* Controls below photos */
 .controls {
   margin: 20px;
 }
