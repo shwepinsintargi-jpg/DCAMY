@@ -10,12 +10,26 @@
 
   <h1>My Girl's Photo Album</h1>
 
+  <!-- Album List -->
   <div id="album-list">
-    <a href="dont.html"><button>Don’t</button></a>
-    <a href="cry.html"><button>Cry</button></a>
-    <a href="anymore.html"><button>Anymore</button></a>
-    <a href="yu.html"><button>Yu</button></a>
+    <button onclick="openAlbum('dont')">Don’t</button>
+    <button onclick="openAlbum('cry')">Cry</button>
+    <button onclick="openAlbum('anymore')">Anymore</button>
+    <button onclick="openAlbum('yu')">Yu</button>
   </div>
 
+  <!-- Photo Container -->
+  <div id="photo-container" class="hidden">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    <h2 id="album-title"></h2>
+    <div id="photos"></div>
+
+    <div id="pagination">
+      <button id="prev-btn" onclick="prevPage()">⬅ Prev</button>
+      <button id="next-btn" onclick="nextPage()">Next ➡</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
