@@ -7,26 +7,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <h1>My Girl's Photo Album</h1>
 
-  <!-- Album List -->
-  <div id="album-list">
-    <button onclick="openAlbum('dont')">Don’t</button>
-    <button onclick="openAlbum('cry')">Cry</button>
-    <button onclick="openAlbum('anymore')">Anymore</button>
-    <button onclick="openAlbum('yu')">Yu</button>
+  <!-- Album Grid -->
+  <div class="album-grid">
+    <div class="album" onclick="openAlbum('dont')">Don’t</div>
+    <div class="album" onclick="openAlbum('cry')">Cry</div>
+    <div class="album" onclick="openAlbum('anymore')">Anymore</div>
+    <div class="album" onclick="openAlbum('yu')">Yu</div>
   </div>
 
-  <!-- Photo Container -->
+  <!-- Photo Viewer -->
   <div id="photo-container" class="hidden">
-    <button class="back-btn" onclick="goBack()">⬅ Back</button>
     <h2 id="album-title"></h2>
-    <div id="photos"></div>
+    <div id="photos" class="photo-grid"></div>
 
-    <div id="pagination">
-      <button id="prev-btn" onclick="prevPage()">⬅ Prev</button>
-      <button id="next-btn" onclick="nextPage()">Next ➡</button>
+    <div class="controls">
+      <button onclick="goBack()">Back</button>
+      <button id="prev-btn" onclick="prevPage()">Prev</button>
+      <button id="next-btn" onclick="nextPage()">Next</button>
     </div>
   </div>
 
